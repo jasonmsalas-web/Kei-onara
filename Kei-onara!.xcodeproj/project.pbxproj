@@ -1,0 +1,567 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		EAEC59C32E1465040070BD89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAEC59AD2E1465030070BD89 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAEC59B42E1465030070BD89;
+			remoteInfo = "Kei-onara!";
+		};
+		EAEC59CD2E1465040070BD89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAEC59AD2E1465030070BD89 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAEC59B42E1465030070BD89;
+			remoteInfo = "Kei-onara!";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EAEC59B52E1465030070BD89 /* Kei-onara!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kei-onara!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAEC59C22E1465040070BD89 /* Kei-onara!Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kei-onara!Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAEC59CC2E1465040070BD89 /* Kei-onara!UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kei-onara!UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		EAEC59B72E1465030070BD89 /* Kei-onara! */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Kei-onara!";
+			sourceTree = "<group>";
+		};
+		EAEC59C52E1465040070BD89 /* Kei-onara!Tests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Kei-onara!Tests";
+			sourceTree = "<group>";
+		};
+		EAEC59CF2E1465040070BD89 /* Kei-onara!UITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Kei-onara!UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EAEC59B22E1465030070BD89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAEC59BF2E1465040070BD89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAEC59C92E1465040070BD89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EAEC59AC2E1465030070BD89 = {
+			isa = PBXGroup;
+			children = (
+				EAEC59B72E1465030070BD89 /* Kei-onara! */,
+				EAEC59C52E1465040070BD89 /* Kei-onara!Tests */,
+				EAEC59CF2E1465040070BD89 /* Kei-onara!UITests */,
+				EAEC59B62E1465030070BD89 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EAEC59B62E1465030070BD89 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EAEC59B52E1465030070BD89 /* Kei-onara!.app */,
+				EAEC59C22E1465040070BD89 /* Kei-onara!Tests.xctest */,
+				EAEC59CC2E1465040070BD89 /* Kei-onara!UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EAEC59B42E1465030070BD89 /* Kei-onara! */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAEC59D62E1465040070BD89 /* Build configuration list for PBXNativeTarget "Kei-onara!" */;
+			buildPhases = (
+				EAEC59B12E1465030070BD89 /* Sources */,
+				EAEC59B22E1465030070BD89 /* Frameworks */,
+				EAEC59B32E1465030070BD89 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				EAEC59B72E1465030070BD89 /* Kei-onara! */,
+			);
+			name = "Kei-onara!";
+			packageProductDependencies = (
+			);
+			productName = "Kei-onara!";
+			productReference = EAEC59B52E1465030070BD89 /* Kei-onara!.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EAEC59C12E1465040070BD89 /* Kei-onara!Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAEC59D92E1465040070BD89 /* Build configuration list for PBXNativeTarget "Kei-onara!Tests" */;
+			buildPhases = (
+				EAEC59BE2E1465040070BD89 /* Sources */,
+				EAEC59BF2E1465040070BD89 /* Frameworks */,
+				EAEC59C02E1465040070BD89 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EAEC59C42E1465040070BD89 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				EAEC59C52E1465040070BD89 /* Kei-onara!Tests */,
+			);
+			name = "Kei-onara!Tests";
+			packageProductDependencies = (
+			);
+			productName = "Kei-onara!Tests";
+			productReference = EAEC59C22E1465040070BD89 /* Kei-onara!Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EAEC59CB2E1465040070BD89 /* Kei-onara!UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAEC59DC2E1465040070BD89 /* Build configuration list for PBXNativeTarget "Kei-onara!UITests" */;
+			buildPhases = (
+				EAEC59C82E1465040070BD89 /* Sources */,
+				EAEC59C92E1465040070BD89 /* Frameworks */,
+				EAEC59CA2E1465040070BD89 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EAEC59CE2E1465040070BD89 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				EAEC59CF2E1465040070BD89 /* Kei-onara!UITests */,
+			);
+			name = "Kei-onara!UITests";
+			packageProductDependencies = (
+			);
+			productName = "Kei-onara!UITests";
+			productReference = EAEC59CC2E1465040070BD89 /* Kei-onara!UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EAEC59AD2E1465030070BD89 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					EAEC59B42E1465030070BD89 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					EAEC59C12E1465040070BD89 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = EAEC59B42E1465030070BD89;
+					};
+					EAEC59CB2E1465040070BD89 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = EAEC59B42E1465030070BD89;
+					};
+				};
+			};
+			buildConfigurationList = EAEC59B02E1465030070BD89 /* Build configuration list for PBXProject "Kei-onara!" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EAEC59AC2E1465030070BD89;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = EAEC59B62E1465030070BD89 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EAEC59B42E1465030070BD89 /* Kei-onara! */,
+				EAEC59C12E1465040070BD89 /* Kei-onara!Tests */,
+				EAEC59CB2E1465040070BD89 /* Kei-onara!UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EAEC59B32E1465030070BD89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAEC59C02E1465040070BD89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAEC59CA2E1465040070BD89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EAEC59B12E1465030070BD89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAEC59BE2E1465040070BD89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAEC59C82E1465040070BD89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EAEC59C42E1465040070BD89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAEC59B42E1465030070BD89 /* Kei-onara! */;
+			targetProxy = EAEC59C32E1465040070BD89 /* PBXContainerItemProxy */;
+		};
+		EAEC59CE2E1465040070BD89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAEC59B42E1465030070BD89 /* Kei-onara! */;
+			targetProxy = EAEC59CD2E1465040070BD89 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EAEC59D42E1465040070BD89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 8BVG9YCL28;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EAEC59D52E1465040070BD89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 8BVG9YCL28;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EAEC59D72E1465040070BD89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8BVG9YCL28;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Kei-onara! needs location access to track your speed and route for the GPS speedometer feature.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Kei-onara! needs location access to track your speed and route for the GPS speedometer feature.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "CarmaLog.Kei-onara-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EAEC59D82E1465040070BD89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8BVG9YCL28;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Kei-onara! needs location access to track your speed and route for the GPS speedometer feature.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Kei-onara! needs location access to track your speed and route for the GPS speedometer feature.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "CarmaLog.Kei-onara-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EAEC59DA2E1465040070BD89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8BVG9YCL28;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "CarmaLog.Kei-onara-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kei-onara!.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Kei-onara!";
+			};
+			name = Debug;
+		};
+		EAEC59DB2E1465040070BD89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8BVG9YCL28;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "CarmaLog.Kei-onara-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kei-onara!.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Kei-onara!";
+			};
+			name = Release;
+		};
+		EAEC59DD2E1465040070BD89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8BVG9YCL28;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "CarmaLog.Kei-onara-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Kei-onara!";
+			};
+			name = Debug;
+		};
+		EAEC59DE2E1465040070BD89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8BVG9YCL28;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "CarmaLog.Kei-onara-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Kei-onara!";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EAEC59B02E1465030070BD89 /* Build configuration list for PBXProject "Kei-onara!" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAEC59D42E1465040070BD89 /* Debug */,
+				EAEC59D52E1465040070BD89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAEC59D62E1465040070BD89 /* Build configuration list for PBXNativeTarget "Kei-onara!" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAEC59D72E1465040070BD89 /* Debug */,
+				EAEC59D82E1465040070BD89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAEC59D92E1465040070BD89 /* Build configuration list for PBXNativeTarget "Kei-onara!Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAEC59DA2E1465040070BD89 /* Debug */,
+				EAEC59DB2E1465040070BD89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAEC59DC2E1465040070BD89 /* Build configuration list for PBXNativeTarget "Kei-onara!UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAEC59DD2E1465040070BD89 /* Debug */,
+				EAEC59DE2E1465040070BD89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EAEC59AD2E1465030070BD89 /* Project object */;
+}

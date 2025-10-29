@@ -1,0 +1,49 @@
+APP: Kei-onara! (Vehicle Tracking & Maintenance)
+
+CAPABILITY REQUESTED: CarPlay (Communication)
+
+APP PURPOSE:
+Kei-onara! is a comprehensive vehicle tracking and maintenance management app for iOS, iPadOS, Apple Watch, and CarPlay. The app helps drivers efficiently track fuel consumption, maintenance schedules, and vehicle expenses across multiple vehicles.
+
+USE CASE FOR CARPLAY:
+Kei-onara! provides essential vehicle data access through CarPlay while driving. This includes:
+
+1. Quick fuel entry logging at gas stations
+2. Maintenance reminders and quick logging of service performed
+3. Current fuel efficiency stats (MPG/MPL) without removing eyes from road
+4. Real-time GPS speedometer display
+5. Odometer updates when needed
+
+HOW IT ENHANCES DRIVING:
+- Safety: Large, driver-friendly interface with minimal interaction required
+- Convenience: Quick logging without opening iPhone
+- Awareness: Current fuel efficiency stats at a glance
+- Memory: Log fuel fill-ups and service at the moment without forgetting
+
+TECHNICAL IMPLEMENTATION:
+- CPTemplate-based CarPlay interface
+- Five main menu options: Log Fuel, Maintenance, Update Odometer, Quick Stats, GPS Speedometer
+- Real-time GPS integration for speedometer
+- Data persistence via VehicleManager integration
+- Metric/Imperial unit support for international users
+
+SAFETY FEATURES:
+- Minimal navigation depth (2 levels max)
+- Large touch targets per Apple HIG
+- Quick 2-3 tap actions only
+- Alert-based confirmations
+- No complex text input while driving
+
+TARGET AUDIENCE:
+Vehicle owners who want to track:
+- Fuel costs and efficiency
+- Maintenance schedules and costs
+- Multi-vehicle fleets (personal or business)
+- Vehicle expense data
+
+APP CATEGORY:
+"Driving Task App" - Vehicle maintenance and tracking utility that helps drivers manage their vehicle fleet efficiently and safely.
+
+WHY CARPLAY IS ESSENTIAL:
+Drivers need to log events (fuel fill-ups, maintenance) at the moment they happen. CarPlay provides safe, hands-free access without distraction. The simplified CarPlay interface allows quick vehicle data access and logging while keeping eyes on the road.
+

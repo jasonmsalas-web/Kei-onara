@@ -14,72 +14,13 @@ struct ExpenseTrackerView: View {
         case yearly = "Yearly"
     }
     
-    // Get colors from current palette
-    private var paletteColors: [Color] {
-        switch vehicleManager.settings.buttonPalette {
-        case .default:
-            return [.green, .purple, .indigo, .teal]
-        case .risingSun:
-            return [
-                Color(red:0.90, green:0.0, blue:0.15),
-                .black,
-                Color(red:0.10, green:0.14, blue:0.49),
-                Color(red:0.90, green:0.0, blue:0.15)
-            ]
-        case .blueHue:
-            return [
-                Color(red:0.31, green:0.76, blue:0.97),
-                Color(red:0.0, green:0.59, blue:0.65),
-                Color(red:0.25, green:0.32, blue:0.71),
-                Color(red:0.10, green:0.46, blue:0.82)
-            ]
-        case .greenHue:
-            return [
-                Color(red:0.55, green:0.77, blue:0.29),
-                Color(red:0.0, green:0.59, blue:0.53),
-                Color(red:0.18, green:0.49, blue:0.20),
-                Color(red:0.22, green:0.56, blue:0.24)
-            ]
-        case .red:
-            return [
-                Color(red:0.90, green:0.0, blue:0.15),
-                Color(red:0.80, green:0.0, blue:0.0),
-                Color(red:0.70, green:0.0, blue:0.0),
-                Color(red:0.60, green:0.0, blue:0.0)
-            ]
-        case .orange:
-            return [
-                Color(red:1.0, green:0.55, blue:0.0),
-                Color(red:1.0, green:0.45, blue:0.0),
-                Color(red:1.0, green:0.35, blue:0.0),
-                Color(red:1.0, green:0.25, blue:0.0)
-            ]
-        case .yellow:
-            return [
-                Color(red:1.0, green:0.95, blue:0.0),
-                Color(red:1.0, green:0.85, blue:0.0),
-                Color(red:1.0, green:0.75, blue:0.0),
-                Color(red:1.0, green:0.65, blue:0.0)
-            ]
-        case .indigo:
-            return [
-                Color(red:0.25, green:0.32, blue:0.71),
-                Color(red:0.20, green:0.25, blue:0.60),
-                Color(red:0.15, green:0.18, blue:0.50),
-                Color(red:0.10, green:0.12, blue:0.40)
-            ]
-        case .violet:
-            return [
-                Color(red:0.56, green:0.0, blue:1.0),
-                Color(red:0.50, green:0.0, blue:0.90),
-                Color(red:0.44, green:0.0, blue:0.80),
-                Color(red:0.38, green:0.0, blue:0.70)
-            ]
-        }
+    // Steve Jobs style colors
+    private var steveJobsColors: [Color] {
+        return [.blue, .blue, .blue, .blue]
     }
     
-    private var fuelColor: Color { paletteColors[0] }
-    private var maintenanceColor: Color { paletteColors[1] }
+    private var fuelColor: Color { steveJobsColors[0] }
+    private var maintenanceColor: Color { steveJobsColors[1] }
     
     var body: some View {
         NavigationView {

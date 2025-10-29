@@ -123,7 +123,7 @@ class NotificationManager: ObservableObject {
     
     func checkForAchievements(vehicleManager: VehicleManager) {
         // Fuel efficiency achievement
-        let mpg = vehicleManager.averageMPG()
+        let mpg = vehicleManager.currentMPG()
         if mpg > 50 {
             scheduleAchievementNotification(achievement: "Fuel Saver! You're getting over 50 MPG! ⛽")
         }

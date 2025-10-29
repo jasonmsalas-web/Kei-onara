@@ -8,10 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var vehicleManager = VehicleManager()
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     var body: some View {
-        DashboardView(vehicleManager: vehicleManager)
+        Group {
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                // iPadOS Interface
+                iPadOSView(vehicleManager: appDelegate.vehicleManager)
+            } else {
+                // iOS Interface
+                SplashScreenView()
+            }
+        }
     }
 }
 

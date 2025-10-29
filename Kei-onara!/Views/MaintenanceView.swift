@@ -22,130 +22,16 @@ struct MaintenanceView: View {
     var body: some View {
         NavigationView {
             List {
-                Section("Add Maintenance Record") {
-                    Picker("Type", selection: $selectedType) {
-                        ForEach(MaintenanceType.allCases, id: \.self) { type in
-                            HStack {
-                                Image(systemName: type.icon)
-                                Text(type.rawValue)
-                            }
-                            .tag(type)
-                        }
-                    }
-                    .pickerStyle(.menu)
-                    
-                    DatePicker("Date", selection: $maintenanceDate, displayedComponents: .date)
-                    
-                    HStack {
-                        Text("Odometer")
-                        Spacer()
-                        TextField("0", text: $odometer)
-                            .keyboardType(.numberPad)
-                            .multilineTextAlignment(.trailing)
-                    }
-                    
-                    HStack {
-                        Text("Cost (Optional)")
-                        Spacer()
-                        TextField("0.00", text: $cost)
-                            .keyboardType(.decimalPad)
-                            .multilineTextAlignment(.trailing)
-                    }
-                    
-                    VStack(alignment: .leading) {
-                        Text("Notes (Optional)")
-                        TextField("Add notes...", text: $notes, axis: .vertical)
-                            .textFieldStyle(.roundedBorder)
-                    }
-                    
-                    HStack {
-                        Text("Location of Service (Optional)")
-                        Spacer()
-                        TextField("Service center name...", text: $locationOfService)
-                            .multilineTextAlignment(.trailing)
-                    }
-                    
-                    // Reminder Section
-                    VStack(alignment: .leading, spacing: 12) {
-                        HStack {
-                            Image(systemName: "bell.fill")
-                                .foregroundColor(.orange)
-                            Text("Maintenance Reminder")
-                                .font(.headline)
-                            Spacer()
-                            Toggle("", isOn: $reminderEnabled)
-                        }
-                        
-                        if reminderEnabled {
-                            VStack(alignment: .leading, spacing: 8) {
-                                Picker("Reminder Type", selection: $reminderType) {
-                                    ForEach(ReminderType.allCases, id: \.self) { type in
-                                        HStack {
-                                            Image(systemName: type.icon)
-                                            Text(type.rawValue)
-                                        }
-                                        .tag(type)
-                                    }
-                                }
-                                .pickerStyle(.segmented)
-                                
-                                HStack {
-                                    Text(reminderType == .odometer ? "Additional km:" : "Days from now:")
-                                    Spacer()
-                                    TextField(reminderType == .odometer ? "5000" : "30", text: $reminderValue)
-                                        .keyboardType(.numberPad)
-                                        .multilineTextAlignment(.trailing)
-                                        .frame(width: 100)
-                                }
-                            }
-                            .padding(.leading, 20)
-                        }
-                    }
-                    
-                    Button("Add Record") {
-                        showingAddRecord = true
-                    }
-                    .frame(maxWidth: .infinity)
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(canAddRecord ? Color.blue : Color.gray)
-                    .cornerRadius(10)
-                    .disabled(!canAddRecord)
-                }
-                
-                Section("Maintenance History") {
-                    let currentVehicleRecords = vehicleManager.maintenanceRecords
-                        .filter { $0.vehicleId == vehicleManager.currentVehicle?.id }
-                        .sorted(by: { $0.date > $1.date })
-                    
-                    if currentVehicleRecords.isEmpty {
-                        Text("No maintenance records yet")
-                            .foregroundColor(.secondary)
-                            .italic()
-                    } else {
-                        ForEach(currentVehicleRecords) { record in
-                            MaintenanceRecordRow(record: record, onEdit: {
-                                print("📝 Edit callback triggered for \(record.type.rawValue)")
-                                editingRecord = record
-                                showingEditRecord = true
-                            }, onDelete: {
-                                print("🗑️ Delete callback triggered for \(record.type.rawValue)")
-                                recordToDelete = record
-                                showingDeleteAlert = true
-                            })
-                        }
-                    }
-                }
+                addMaintenanceSection
+                maintenanceHistorySection
             }
             .navigationTitle("Maintenance")
             .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarContent(placement: .navigationBarLeading) {
-                    Button("Done") {
-                        dismiss()
-                    }
-                }
-            }
+            .navigationBarBackButtonHidden(true)
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(leading: Button("Done") {
+                dismiss()
+            })
             .alert("Add Maintenance Record", isPresented: $showingAddRecord) {
                 Button("Cancel", role: .cancel) { }
                 Button("Add") {
@@ -156,10 +42,9 @@ struct MaintenanceView: View {
             }
             .sheet(isPresented: $showingEditRecord) {
                 if let record = editingRecord {
-                    print("📱 Presenting edit sheet for \(record.type.rawValue)")
                     EditMaintenanceRecordView(vehicleManager: vehicleManager, record: record)
                 } else {
-                    print("❌ No editing record found")
+                    EmptyView()
                 }
             }
             .alert("Delete Maintenance Record", isPresented: $showingDeleteAlert) {
@@ -177,6 +62,125 @@ struct MaintenanceView: View {
         }
     }
     
+    private var addMaintenanceSection: some View {
+        Section("Add Maintenance Record") {
+            Picker("Type", selection: $selectedType) {
+                ForEach(MaintenanceType.allCases, id: \.self) { type in
+                    HStack {
+                        Image(systemName: type.icon)
+                        Text(type.rawValue)
+                    }
+                    .tag(type)
+                }
+            }
+            .pickerStyle(.menu)
+            
+            DatePicker("Date", selection: $maintenanceDate, displayedComponents: .date)
+            
+            HStack {
+                Text("Odometer")
+                Spacer()
+                TextField("0", text: $odometer)
+                    .keyboardType(.numberPad)
+                    .multilineTextAlignment(.trailing)
+            }
+            
+            HStack {
+                Text("Cost (Optional)")
+                Spacer()
+                TextField("0.00", text: $cost)
+                    .keyboardType(.decimalPad)
+                    .multilineTextAlignment(.trailing)
+            }
+            
+            VStack(alignment: .leading) {
+                Text("Notes (Optional)")
+                TextField("Add notes...", text: $notes, axis: .vertical)
+                    .textFieldStyle(.roundedBorder)
+            }
+            
+            HStack {
+                Text("Location of Service (Optional)")
+                Spacer()
+                TextField("Service center name...", text: $locationOfService)
+                    .multilineTextAlignment(.trailing)
+            }
+            
+            // Reminder Section
+            VStack(alignment: .leading, spacing: 12) {
+                HStack {
+                    Image(systemName: "bell.fill")
+                        .foregroundColor(.orange)
+                    Text("Maintenance Reminder")
+                        .font(.headline)
+                    Spacer()
+                    Toggle("", isOn: $reminderEnabled)
+                }
+                
+                if reminderEnabled {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Picker("Reminder Type", selection: $reminderType) {
+                            ForEach(ReminderType.allCases, id: \.self) { type in
+                                HStack {
+                                    Image(systemName: type.icon)
+                                    Text(type.rawValue)
+                                }
+                                .tag(type)
+                            }
+                        }
+                        .pickerStyle(.segmented)
+                        
+                        HStack {
+                            Text(reminderType == .odometer ? "Additional km:" : "Days from now:")
+                            Spacer()
+                            TextField(reminderType == .odometer ? "5000" : "30", text: $reminderValue)
+                                .keyboardType(.numberPad)
+                                .multilineTextAlignment(.trailing)
+                                .frame(width: 100)
+                        }
+                    }
+                    .padding(.leading, 20)
+                }
+            }
+            
+            Button("Add Record") {
+                showingAddRecord = true
+            }
+            .frame(maxWidth: .infinity)
+            .foregroundColor(.white)
+            .padding()
+            .background(canAddRecord ? Color.blue : Color.gray)
+            .cornerRadius(10)
+            .disabled(!canAddRecord)
+        }
+    }
+    
+    private var maintenanceHistorySection: some View {
+        Section("Maintenance History") {
+            if currentVehicleRecords.isEmpty {
+                Text("No maintenance records yet")
+                    .foregroundColor(.secondary)
+                    .italic()
+            } else {
+                ForEach(currentVehicleRecords) { record in
+                    MaintenanceRecordRow(record: record, onEdit: {
+                        editingRecord = record
+                        showingEditRecord = true
+                    }, onDelete: {
+                        recordToDelete = record
+                        showingDeleteAlert = true
+                    })
+                }
+            }
+        }
+    }
+    
+    private var currentVehicleRecords: [MaintenanceRecord] {
+        vehicleManager.maintenanceRecords
+            .filter { $0.vehicleId == vehicleManager.currentVehicle?.id }
+            .sorted(by: { $0.date > $1.date })
+    }
+    
     private var canAddRecord: Bool {
         guard let odometerValue = Double(odometer) else { return false }
         return odometerValue > 0
@@ -188,17 +192,22 @@ struct MaintenanceView: View {
         let costValue = Double(cost)
         let reminderValueDouble = Double(reminderValue) ?? 0
         
-        vehicleManager.addMaintenanceRecord(
+        let maintenanceRecord = MaintenanceRecord(
+            vehicleId: vehicleManager.currentVehicle?.id ?? UUID(),
             type: selectedType,
             date: maintenanceDate,
             odometer: odometerValue,
             cost: costValue,
             notes: notes.isEmpty ? nil : notes,
             locationOfService: locationOfService.isEmpty ? nil : locationOfService,
+            nextDueOdometer: nil as Double?,
+            nextDueDate: nil as Date?,
             reminderEnabled: reminderEnabled,
             reminderType: reminderType,
             reminderValue: reminderValueDouble
         )
+        
+        vehicleManager.addMaintenanceRecord(maintenanceRecord)
         
         // Reset form
         odometer = ""
@@ -479,18 +488,23 @@ struct EditMaintenanceRecordView: View {
         let costValue = Double(cost)
         let reminderValueDouble = Double(reminderValue) ?? 0
         
-        vehicleManager.updateMaintenanceRecord(
-            record,
+        let updatedRecord = MaintenanceRecord(
+            id: record.id,
+            vehicleId: record.vehicleId,
             type: selectedType,
             date: maintenanceDate,
             odometer: odometerValue,
             cost: costValue,
             notes: notes.isEmpty ? nil : notes,
             locationOfService: locationOfService.isEmpty ? nil : locationOfService,
+            nextDueOdometer: record.nextDueOdometer,
+            nextDueDate: record.nextDueDate,
             reminderEnabled: reminderEnabled,
             reminderType: reminderType,
             reminderValue: reminderValueDouble
         )
+        
+        vehicleManager.updateMaintenanceRecord(updatedRecord)
         
         dismiss()
     }

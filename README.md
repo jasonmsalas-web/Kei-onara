@@ -63,6 +63,48 @@ open "Kei-onara!.xcodeproj"
 
 4. Build and run the project (⌘+R)
 
+## Version Management
+
+The app uses an automated version management system that increments the version number by 0.001 with each change.
+
+### Current Version
+- **Marketing Version**: 1.0.130 (Freeway)
+- **Build Number**: 130
+
+### Version Management Scripts
+
+#### Automatic Version Incrementing
+- **Cursor Integration**: Automatically increments version when changes are accepted in Cursor
+- **Git Hook**: A pre-commit hook automatically increments the version before each commit
+- **Manual Increment**: Run `./increment_version.sh` to manually increment the version
+
+#### Cursor Auto-Increment
+```bash
+# Run automatically when changes are accepted in Cursor
+./cursor_auto_increment.sh
+
+# Or manually run the auto increment
+./auto_increment_version.sh
+```
+
+#### Version Information
+```bash
+# Show current version information
+./update_version.sh show
+
+# Manually increment version
+./update_version.sh increment
+```
+
+#### Version Format
+- **Marketing Version**: `1.0.XXX` (e.g., 1.0.127, 1.0.128, 1.0.130)
+- **Build Number**: Increments with each version change
+- **Version Name**: Each version has a codename (e.g., "Freeway")
+
+### Version History
+- **1.0.130 (Freeway)**: Added splash screen and automatic version incrementing
+- **1.0.129 (Freeway)**: Fixed Apple Maps route display and GPS speedometer improvements
+
 ## Usage
 
 ### Getting Started

@@ -218,29 +218,161 @@ struct MascotWidget: View {
 
 struct SplashScreenView: View {
     @State private var isActive = false
+    @State private var logoScale: CGFloat = 0.8
+    @State private var logoOpacity: Double = 0.0
+    @State private var textOpacity: Double = 0.0
+    @State private var backgroundOpacity: Double = 0.0
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     var body: some View {
         if isActive {
-            DashboardView(vehicleManager: VehicleManager())
+            // Show Steve Jobs UI as default
+            SteveJobsUIView(vehicleManager: appDelegate.vehicleManager)
         } else {
-            VStack {
-                Image("SplashIcon")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 240, height: 240)
-                    .padding(32)
-                Text("KEI-ONARA!")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .padding(.top, 16)
+            ZStack {
+                // Steve Jobs style background - Pure white with subtle gradient
+                LinearGradient(
+                    gradient: Gradient(colors: [
+                        Color.white,
+                        Color.gray.opacity(0.02),
+                        Color.white
+                    ]),
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+                .ignoresSafeArea()
+                .opacity(backgroundOpacity)
+                
+                VStack(spacing: 40) {
+                    Spacer()
+                    
+                    // App Icon with Steve Jobs style
+                    ZStack {
+                        // Icon background with glass effect
+                        RoundedRectangle(cornerRadius: 32)
+                            .fill(
+                                LinearGradient(
+                                    gradient: Gradient(colors: [
+                                        Color.white.opacity(0.95),
+                                        Color.gray.opacity(0.05),
+                                        Color.white.opacity(0.9)
+                                    ]),
+                                    startPoint: .topLeading,
+                                    endPoint: .bottomTrailing
+                                )
+                            )
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 32)
+                                    .stroke(
+                                        LinearGradient(
+                                            gradient: Gradient(colors: [
+                                                Color.gray.opacity(0.2),
+                                                Color.gray.opacity(0.1)
+                                            ]),
+                                            startPoint: .top,
+                                            endPoint: .bottom
+                                        ),
+                                        lineWidth: 1.5
+                                    )
+                            )
+                            .shadow(color: .black.opacity(0.08), radius: 20, x: 0, y: 8)
+                        
+                        // App Icon
+                        Image(systemName: "car.fill")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 120, height: 120)
+                            .foregroundColor(.blue)
+                            .clipShape(RoundedRectangle(cornerRadius: 24))
+                    }
+                    .scaleEffect(logoScale)
+                    .opacity(logoOpacity)
+                    
+                    // App Name with Steve Jobs typography
+                    VStack(spacing: 12) {
+                        Text("KEI-ONARA!")
+                            .font(.system(size: 36, weight: .thin))
+                            .foregroundColor(.black)
+                            .tracking(4)
+                        
+                        Text("Vehicle Management")
+                            .font(.system(size: 16, weight: .light))
+                            .foregroundColor(.gray)
+                            .tracking(2)
+                    }
+                    .opacity(textOpacity)
+                    
+                    Spacer()
+                    
+                    // Loading indicator with Steve Jobs style
+                    VStack(spacing: 16) {
+                        // Minimal loading dots
+                        HStack(spacing: 8) {
+                            ForEach(0..<3) { index in
+                                Circle()
+                                    .fill(Color.blue)
+                                    .frame(width: 8, height: 8)
+                                    .opacity(0.3)
+                                    .scaleEffect(1.0)
+                                    .animation(
+                                        Animation.easeInOut(duration: 0.6)
+                                            .repeatForever()
+                                            .delay(Double(index) * 0.2),
+                                        value: isActive
+                                    )
+                            }
+                        }
+                        
+                        Text("Loading...")
+                            .font(.system(size: 14, weight: .light))
+                            .foregroundColor(.gray)
+                            .tracking(1)
+                    }
+                    .opacity(textOpacity)
+                    .padding(.bottom, 60)
+                }
+                .padding(.horizontal, 40)
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color(red: 0.38, green: 0.82, blue: 0.85))
             .onAppear {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                    withAnimation {
+                // Animate elements in sequence
+                withAnimation(.easeOut(duration: 0.8)) {
+                    backgroundOpacity = 1.0
+                }
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    withAnimation(.spring(response: 0.8, dampingFraction: 0.6)) {
+                        logoScale = 1.0
+                        logoOpacity = 1.0
+                    }
+                }
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+                    withAnimation(.easeOut(duration: 0.6)) {
+                        textOpacity = 1.0
+                    }
+                }
+                
+                // Transition to main app after delay
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                    withAnimation(.easeInOut(duration: 0.8)) {
                         isActive = true
                     }
                 }
+            }
+            .onReceive(NotificationCenter.default.publisher(for: .showFuelEntry)) { _ in
+                // Handle Siri shortcut for fuel entry
+                print("Siri shortcut: Show fuel entry")
+                // This will be handled by the main app flow
+            }
+            .onReceive(NotificationCenter.default.publisher(for: .showSpeedometer)) { _ in
+                // Handle Siri shortcut for start ride
+                print("Siri shortcut: Start ride")
+                // This will be handled by the main app flow
+            }
+            .onReceive(NotificationCenter.default.publisher(for: .showMaintenance)) { _ in
+                // Handle Siri shortcut for maintenance
+                print("Siri shortcut: Show maintenance")
+                // This will be handled by the main app flow
             }
         }
     }

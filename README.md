@@ -1,40 +1,63 @@
 # Kei-onara! 🚛
 
-A comprehensive iOS app for managing your Kei truck with a focus on simplicity, accessibility, and fun!
+A comprehensive iOS app for managing your Kei truck fleet with a focus on simplicity, accessibility, and fun! Track fuel, maintenance, and expenses across all your vehicles with native support for iPhone, iPad, Apple Watch, and CarPlay.
 
-## Features
+## ✨ Key Features
 
-### 🎯 Core Features
-- **Giant Button Interface** - Huge, clear buttons with big text for easy use
-- **One-Tap Drive Logging** - Just tap "Start Drive" and "End Drive" to auto-log kilometers
-- **Automatic Unit Conversion** - Shows both metric and imperial units side by side
-- **Instant MPG Dashboard** - Giant circular display showing current and average fuel efficiency
+### 🚗 Multi-Vehicle Management
+- **Unlimited Vehicles** - Track multiple vehicles with individual profiles
+- **Quick Vehicle Switching** - Easy switching between your fleet
+- **Vehicle Photos** - Add photos and insurance card storage
+- **VIN Tracking** - Store Vehicle Identification Numbers
+- **Data Transfer** - Move maintenance records between vehicles
 
-### ⛽ Fuel Management
-- **Fuel Journal** - Simple screen to enter liters/gallons, price, and odometer
-- **Auto Cost Calculation** - Automatically calculates cost per km/mile
-- **Fuel Efficiency Trends** - Simple graphs showing fuel economy over time
+### ⛽ Advanced Fuel Management
+- **Dual Unit Support** - Track in Liters or Gallons with auto-conversion
+- **Real-time Conversions** - See equivalent values as you type
+- **Fuel Grades** - Track Regular, Mid-grade, Premium, and Ethanol-free
+- **Location Logging** - Remember where you filled up
+- **Full Tank Tracking** - Mark partial vs full tank purchases
+- **Cost Analytics** - Automatic total cost and per-unit calculations
 
-### 🔧 Maintenance Tracking
-- **Maintenance Logbook** - Record oil changes, tire rotations, brake checks, etc.
-- **Due Date Alerts** - Shows next maintenance due dates clearly on dashboard
-- **Push Notifications** - Friendly reminders with emojis for upcoming maintenance
+### 🔧 Comprehensive Maintenance Tracking
+- **15+ Service Types** - Oil changes, tire rotation, brakes, filters, and more
+- **Smart Reminders** - Odometer or date-based maintenance alerts
+- **Overdue Tracking** - Visual indicators for overdue services
+- **Service History** - Complete maintenance timeline
+- **Cost Tracking** - Record service costs and notes
 
-### 🎨 Accessibility Features
-- **Grandma Mode** - Even larger text, simpler screens, high-contrast colors
-- **Voice Entry** - "Hey app, log my fuel: 30 liters at 100,000 km"
-- **Dark Mode** - Auto-switch based on time or user preference
+### 📱 Platform Support
+- **iPhone** - Full-featured native experience with Steve Jobs-inspired UI
+- **iPad** - Optimized iPadOS layouts with split-screen support
+- **Apple Watch** - Companion app with GPS location tracking
+- **CarPlay** - In-car access to your vehicle data
 
-### 📊 Advanced Features
+### 🔄 Data Management
+- **iCloud Backup** - Automatic syncing across all your devices
+- **Google Drive Export** - Manual backup to Google Drive
+- **Data Export** - JSON export for local backups
+- **Automatic Sync** - Keep your data up-to-date across devices
+
+### 🎯 Smart Features
+- **Siri Shortcuts** - Voice commands to log fuel and maintenance
+- **Voice Entry** - Dictate fuel entries using voice recognition
 - **GPS Speedometer** - Real-time speed tracking with route visualization
-- **Expense Tracker** - Monthly/yearly fuel and maintenance cost analysis
-- **Multi-Vehicle Support** - Switch easily between multiple Kei trucks
-- **Backup & Restore** - iCloud backup and export to PDF for printouts
+- **Dark Mode** - Beautiful dark theme with automatic switching
+- **Metric/Imperial** - Seamless unit conversion throughout
 
-### 🎮 Fun Features
-- **Cute Mascot** - Animated Kei truck character provides encouragement
-- **Achievement Badges** - "Good driver!" and "Fuel saver!" badges for motivation
-- **Mileage Goals** - Set and track monthly/yearly driving distance goals
+### 📊 Analytics & Insights
+- **Fuel Efficiency** - Track MPG/KPL over time
+- **Expense Tracker** - Monthly and yearly cost analysis
+- **Dashboard** - At-a-glance overview of all key metrics
+- **Drive Logging** - Automatic trip tracking with GPS
+- **Cost Per Mile** - Understand your true vehicle costs
+
+### 🎨 User Experience
+- **Steve Jobs UI** - Clean, minimalist design inspired by Apple's founder
+- **Grandma Mode** - Extra-large text and simplified interfaces
+- **Accessibility** - Full VoiceOver support and high contrast
+- **Localization** - Support for multiple languages
+- **Achievement System** - Track your driving milestones
 
 ## Screenshots
 
@@ -42,9 +65,12 @@ A comprehensive iOS app for managing your Kei truck with a focus on simplicity, 
 
 ## Requirements
 
-- iOS 15.0+
-- Xcode 14.0+
-- Swift 5.7+
+- **iOS 15.0+** - iPhone and iPad
+- **watchOS 9.0+** - Apple Watch
+- **Xcode 14.0+**
+- **Swift 5.7+**
+- **CloudKit** - For iCloud backup (optional)
+- **Google Drive API** - For Google Drive backup (optional)
 
 ## Installation
 
@@ -68,8 +94,8 @@ open "Kei-onara!.xcodeproj"
 The app uses an automated version management system that increments the version number by 0.001 with each change.
 
 ### Current Version
-- **Marketing Version**: 1.0.130 (Freeway)
-- **Build Number**: 130
+- **Marketing Version**: 1.0.133 (Freeway)
+- **Build Number**: 133
 
 ### Version Management Scripts
 
@@ -131,26 +157,45 @@ The app is built using SwiftUI with the following structure:
 ```
 Kei-onara!/
 ├── Models/
-│   ├── VehicleData.swift      # Core data models and VehicleManager
-│   ├── DataManager.swift      # Data persistence layer
-│   └── NotificationManager.swift # Push notification handling
+│   ├── VehicleData.swift           # Core data models and VehicleManager
+│   ├── DataManager.swift           # Data persistence layer
+│   ├── NotificationManager.swift   # Push notification handling
+│   ├── AppDelegate.swift           # App lifecycle management
+│   ├── CarPlayManager.swift        # CarPlay integration
+│   ├── CloudKitSyncManager.swift  # iCloud sync
+│   ├── ICloudBackupManager.swift  # iCloud backup
+│   ├── GoogleDriveBackupManager.swift # Google Drive backup
+│   ├── ColorSchemeManager.swift    # Dark mode management
+│   └── SiriShortcutsManager.swift  # Siri integration
 ├── Views/
-│   ├── DashboardView.swift    # Main dashboard with giant buttons
-│   ├── FuelEntryView.swift    # Fuel logging interface
-│   ├── MaintenanceView.swift  # Maintenance tracking
-│   ├── SpeedometerView.swift  # GPS speedometer and route tracking
-│   ├── ExpenseTrackerView.swift # Cost analysis and charts
-│   ├── SettingsView.swift     # App settings and preferences
-│   └── MascotView.swift       # Cute animated mascot
-└── Assets.xcassets/           # App icons and colors
+│   ├── DashboardView.swift         # Main dashboard
+│   ├── FuelEntryView.swift         # Fuel logging
+│   ├── MaintenanceView.swift       # Maintenance tracking
+│   ├── SpeedometerView.swift       # GPS tracking
+│   ├── ExpenseTrackerView.swift    # Cost analysis
+│   ├── VehicleManagementView.swift # Multi-vehicle management
+│   ├── SettingsView.swift         # App settings
+│   ├── MascotView.swift           # Animated mascot
+│   ├── iPadOSView.swift           # iPad-specific layouts
+│   ├── VoiceEntryView.swift       # Voice input
+│   ├── SiriShortcutsView.swift    # Siri configuration
+│   └── ICloudBackupView.swift     # iCloud backup UI
+├── Kei-onara! Watch App/          # Apple Watch companion
+│   ├── ContentView.swift
+│   ├── WatchLocationManager.swift
+│   └── KeiOnaraWatchApp.swift
+└── Assets.xcassets/               # App icons and colors
 ```
 
 ### Key Components
 
-- **VehicleManager**: Central data management and business logic
-- **DataManager**: UserDefaults-based persistence
-- **LocationManager**: GPS tracking for speedometer feature
-- **NotificationManager**: Push notification scheduling
+- **VehicleManager**: Central data management with caching for performance
+- **DataManager**: JSON-based file persistence with encryption
+- **NotificationManager**: Push notification scheduling and delivery
+- **CloudKitSyncManager**: Real-time iCloud synchronization
+- **CarPlayManager**: In-car experience integration
+- **SiriShortcutsManager**: Voice command support
+- **ColorSchemeManager**: Dynamic dark mode support
 
 ## Data Models
 
@@ -168,25 +213,39 @@ Kei-onara!/
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
+## Recent Updates (v1.0.133)
+
+✅ **Apple Watch Support** - Companion app with GPS location tracking
+✅ **iPadOS Optimization** - Dedicated iPad layouts for better tablet experience
+✅ **iCloud Backup & Sync** - Automatic data synchronization across devices
+✅ **Google Drive Backup** - Manual backup to Google Drive
+✅ **Siri Shortcuts** - Voice commands for logging fuel and maintenance
+✅ **CarPlay Integration** - In-car access to your vehicle data
+✅ **Voice Entry** - Dictate fuel entries using speech recognition
+✅ **Dark Mode** - Beautiful dark theme with automatic switching
+✅ **Performance Optimization** - Caching system for faster data access
+✅ **Multi-Vehicle Management** - Track unlimited vehicles
+✅ **Enhanced UI** - Steve Jobs-inspired minimalist design
+
 ## Roadmap
 
-### Version 1.1
-- [ ] QR code export for service centers
-- [ ] Tire wear tracking
-- [ ] iOS widget for home screen
-- [ ] Monthly summary reports
+### Version 1.1 (Planned)
+- [ ] iOS Home Screen Widget
+- [ ] Monthly/Yearly Summary Reports
+- [ ] Enhanced Analytics Dashboard
+- [ ] Service Center QR Code Export
 
-### Version 1.2
-- [ ] Cloud sync with iCloud
-- [ ] Advanced analytics and insights
-- [ ] Export to PDF functionality
-- [ ] Social sharing features
+### Version 1.2 (Planned)
+- [ ] PDF Export for Reports
+- [ ] Social Sharing Features
+- [ ] Advanced Route Planning
+- [ ] Integration with Service Centers
 
-### Version 1.3
-- [ ] Multiple vehicle profiles
-- [ ] Advanced route planning
-- [ ] Integration with service centers
-- [ ] Voice commands for hands-free operation
+### Version 1.3 (Future)
+- [ ] AI-Powered Maintenance Predictions
+- [ ] Carbon Footprint Tracking
+- [ ] Fleet Management Dashboard
+- [ ] Community Features
 
 ## License
 

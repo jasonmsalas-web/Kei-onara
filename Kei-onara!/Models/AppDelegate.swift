@@ -10,6 +10,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         print("🚗 AppDelegate initialized")
         
+        // Setup CarPlay manager with vehicle manager
+        carPlayManager.setup(with: vehicleManager)
+        
         // Initialize Siri Shortcuts
         setupSiriShortcuts()
         

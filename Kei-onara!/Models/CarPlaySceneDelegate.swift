@@ -3,21 +3,18 @@ import CarPlay
 import UIKit
 
 class CarPlaySceneDelegate: NSObject, CPTemplateApplicationSceneDelegate {
-    private var carPlayManager: CarPlayManager?
-    private var vehicleManager: VehicleManager?
-    
     func templateApplicationScene(_ templateApplicationScene: CPTemplateApplicationScene, didConnect interfaceController: CPInterfaceController) {
         print("🚗 CarPlay scene connected")
         
-        // Get the shared vehicle manager
-        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
-            self.vehicleManager = appDelegate.vehicleManager
-            self.carPlayManager = appDelegate.carPlayManager
+        // Get the CarPlay manager from AppDelegate
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            print("❌ Failed to get AppDelegate")
+            return
         }
         
-        // Setup CarPlay manager
-        carPlayManager?.setup(with: vehicleManager ?? VehicleManager())
-        carPlayManager?.connect(interfaceController: interfaceController)
+        // Connect to CarPlay with the shared manager
+        appDelegate.carPlayManager.connect(interfaceController: interfaceController)
+        print("✅ CarPlay connected successfully")
     }
     
     func templateApplicationScene(_ templateApplicationScene: CPTemplateApplicationScene, didSelect navigationAlert: CPNavigationAlert) {

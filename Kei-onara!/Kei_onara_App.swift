@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import UIKit
 
 @main
 struct Kei_onara_App: App {
     @StateObject private var vehicleManager = VehicleManager()
     @StateObject private var notificationManager = NotificationManager.shared
     @StateObject private var siriShortcutsManager = SiriShortcutsManager.shared
+    
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     var body: some Scene {
         WindowGroup {

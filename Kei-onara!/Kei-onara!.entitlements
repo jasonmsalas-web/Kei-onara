@@ -4,10 +4,8 @@
 <dict>
 	<key>aps-environment</key>
 	<string>development</string>
-	<key>com.apple.developer.carplay-communications</key>
-	<array>
-		<string>carmessages</string>
-	</array>
+	<key>com.apple.developer.carplay-app</key>
+	<true/>
 	<key>com.apple.developer.icloud-container-identifiers</key>
 	<array>
 		<string>iCloud.CarmaLog.Kei-onara-</string>

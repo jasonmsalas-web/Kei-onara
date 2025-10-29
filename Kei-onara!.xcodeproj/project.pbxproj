@@ -398,7 +398,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "Kei-onara!/Kei-onara!.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 145;
+				CURRENT_PROJECT_VERSION = 146;
 				DEVELOPMENT_TEAM = 8BVG9YCL28;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -413,14 +413,14 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UIApplicationSupportsMultipleScenes = YES;
 				INFOPLIST_KEY_UISceneConfiguration_ApplicationSessionRole = "UIWindowSceneSessionRoleApplication";
-				INFOPLIST_KEY_UISceneConfiguration_CarPlayApplicationSessionRoleApplication = "CarPlay";
+				INFOPLIST_KEY_UISceneConfiguration_CarPlayApplicationSessionRoleApplication_delegateClassName = "$(PRODUCT_MODULE_NAME).CarPlaySceneDelegate";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.145;
+				MARKETING_VERSION = 1.0.146;
 				PRODUCT_BUNDLE_IDENTIFIER = "CarmaLog.Kei-onara-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -440,7 +440,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "Kei-onara!/Kei-onara!.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 145;
+				CURRENT_PROJECT_VERSION = 146;
 				DEVELOPMENT_TEAM = 8BVG9YCL28;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -455,14 +455,14 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UIApplicationSupportsMultipleScenes = YES;
 				INFOPLIST_KEY_UISceneConfiguration_ApplicationSessionRole = "UIWindowSceneSessionRoleApplication";
-				INFOPLIST_KEY_UISceneConfiguration_CarPlayApplicationSessionRoleApplication = "CarPlay";
+				INFOPLIST_KEY_UISceneConfiguration_CarPlayApplicationSessionRoleApplication_delegateClassName = "$(PRODUCT_MODULE_NAME).CarPlaySceneDelegate";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.145;
+				MARKETING_VERSION = 1.0.146;
 				PRODUCT_BUNDLE_IDENTIFIER = "CarmaLog.Kei-onara-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -479,11 +479,11 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 145;
+				CURRENT_PROJECT_VERSION = 146;
 				DEVELOPMENT_TEAM = 8BVG9YCL28;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
-				MARKETING_VERSION = 1.0.145;
+				MARKETING_VERSION = 1.0.146;
 				PRODUCT_BUNDLE_IDENTIFIER = "CarmaLog.Kei-onara-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -498,11 +498,11 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 145;
+				CURRENT_PROJECT_VERSION = 146;
 				DEVELOPMENT_TEAM = 8BVG9YCL28;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
-				MARKETING_VERSION = 1.0.145;
+				MARKETING_VERSION = 1.0.146;
 				PRODUCT_BUNDLE_IDENTIFIER = "CarmaLog.Kei-onara-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -516,10 +516,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 145;
+				CURRENT_PROJECT_VERSION = 146;
 				DEVELOPMENT_TEAM = 8BVG9YCL28;
 				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0.145;
+				MARKETING_VERSION = 1.0.146;
 				PRODUCT_BUNDLE_IDENTIFIER = "CarmaLog.Kei-onara-UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -533,10 +533,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 145;
+				CURRENT_PROJECT_VERSION = 146;
 				DEVELOPMENT_TEAM = 8BVG9YCL28;
 				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0.145;
+				MARKETING_VERSION = 1.0.146;
 				PRODUCT_BUNDLE_IDENTIFIER = "CarmaLog.Kei-onara-UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
